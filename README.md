@@ -1,61 +1,64 @@
-# FLOH IPTV
+FLOH IPTV PLUS 1.0.0 – IPTV player for Samsung Tizen TVs
 
-*English · [Deutsch](README.de.md)*
+A clean, remote-friendly IPTV player built for the big screen. Bring your own
+M3U playlist (and optional XMLTV guide) and watch live TV, radio and a full
+programme guide in a modern 1080p interface.
 
-A fast IPTV player for **Samsung TVs**, **Fire TV**, **Android TV** and **Windows**.
-It brings no channels: you enter the M3U link of your own provider.
+HOME SCREEN
+- Hero banner with "Watch now": films of the day, or Sport / News / Kids picked
+  from the programme guide
+- "Live now" and "Movies today" rows, with optional programme artwork
+- Clock, date and local weather (Open-Meteo) – choose any city
+- Quick search across channels and programmes
 
-![Home screen](bilder/start.png)
+LIVE TV & RADIO
+- Group/channel browser with live preview info: now, next, progress bar and
+  description
+- Jump to a channel with the number keys (0-9)
+- Favorites (YELLOW options menu, GREEN to open), plus hide channels or groups
+  you never watch
+- Auto categories built from channel names, with smart Sport, Kids and News
+  lists (by group/name, by guide data, or both)
+- Dedicated radio mode with station artwork, now-playing and live info
 
-## Download
+TV GUIDE (EPG)
+- Full grid guide with a time line, plus a per-channel schedule for today and
+  tomorrow
+- Reads XMLTV guides, including gzip-compressed ones, or uses the guide linked
+  in your playlist header (url-tvg)
+- Guide window of 12 / 24 / 30 / 48 hours, with automatic refresh
+- Guide is stored on the TV for a fast start
 
-| Device | File | Guide |
-|---|---|---|
-| Fire TV, Android TV, Google TV | [FLOH-IPTV.apk](https://github.com/kingflooow/floh-iptv/releases/latest/download/FLOH-IPTV.apk) | [Fire TV / Android TV guide](INSTALL-FIRETV.md) |
-| Samsung TVs from 2017 | [FLOH-IPTV.wgt](https://github.com/kingflooow/floh-iptv/releases/latest/download/FLOH-IPTV.wgt) | [Samsung guide](INSTALL-SAMSUNG.md) |
-| Windows 10 and 11 | [FLOH-IPTV-windows.zip](https://github.com/kingflooow/floh-iptv/releases/latest/download/FLOH-IPTV-windows.zip) | [Windows guide](INSTALL-WINDOWS.md) |
+PLAYBACK
+- Samsung AVPlay by default for hardware-accelerated playback; Shaka, dash.js
+  and Video.js available as alternative engines
+- HLS and DASH (.mpd) streams, ClearKey-protected streams supported
+- Playback profiles: Fast start / Balanced / Stable / Custom, with adjustable
+  buffer, reconnect attempts and zapping delay
+- Freeze detection: a stalled picture is reopened automatically
+- Automatic failover: tries another version of the channel, then the next one
+- 4K/UHD mode and smart widening of SD pictures to 16:9
+- Shrink and dim the picture from the info bar
+- "Slow internet connection" notice when the network can't keep up
 
-Older versions and changes are under [Releases](https://github.com/kingflooow/floh-iptv/releases).
+PLAYLISTS
+- Multiple playlists with easy switching, per-playlist favorites and hidden items
+- Automatic playlist reload (set the interval) or reload instantly with RED
+- Long links can be typed with the on-screen keyboard
 
-**Try it without a list of your own:** enter this demo playlist in the app:
-`https://kingflooow.github.io/floh-iptv/demo.m3u`
-It has eight invented channels with demo pictures and a guide of their own.
+CUSTOMISATION & EXTRAS
+- Two themes: Default (blue/violet) and Aqua (calm, one blue accent)
+- English and Vietnamese interface
+- Choose your start screen (Home, Live TV, Radio, Guide, Favorites)
+- Optional PIN lock at start and after standby
+- Built-in diagnostics page ("Measured on this TV")
+- Reset everything in one step if you want a fresh start
 
-## What it does
-
-- **Fast even with huge lists**: playlist and TV guide are ready in seconds and kept on the
-  device; the channel list scrolls page by page.
-- **Home screen** with the live matches from the guide of your own sport channels, and tiles for
-  Live TV, Sport, Kids, News, TV Guide and Favorites.
-- **Channel list** with groups, preview, favorites, channel numbers and a search for channels
-  and programmes.
-- **TV guide** (EPG) as a grid over the next hours.
-- **A channel that freezes** is reopened by the app itself, which then moves to another version
-  (SD instead of HD, for example) or the next channel.
-- **"Smart" picture format**: SD channels fill the whole picture instead of staying narrow.
-- **Several playlists** side by side, each with its own favorites and guide; switch between
-  them in the settings.
-- **Playlist reload** from every minute to once a week, also while the app runs, for providers
-  whose links expire; the channel you watch keeps playing.
-- **PIN lock** (optional, off by default): asked for at start and after standby.
-- **Hide channels and groups** you never want to see, for example adult content; the settings
-  show them again (behind the PIN if one is set).
-- **Picture quality in the info bar**: SD, HD, Full HD or 4K, with the frame rate (Fire TV,
-  Android TV, Windows) or the bit rate (Samsung).
-- **Settings** for buffering, zapping, picture format and the guide, with the load times measured
-  on your device.
-- **On a PC with mouse and keyboard**: pointing selects, a click plays, the wheel scrolls.
-
-| Channel list | TV guide |
-|---|---|
-| ![Channel list](bilder/senderliste.png) | ![TV guide](bilder/programm.png) |
-| **Full screen with info bar** | **Settings** |
-| ![Full screen](bilder/vollbild.png) | ![Settings](bilder/einstellungen.png) |
-
-## Note
-
-FLOH IPTV is only a player. It contains no channels, playlists or subscriptions and belongs to no
-provider. You are responsible for what you play with your own playlist. The pictures show an
-invented line-up.
-
-[Privacy](PRIVACY.md) · Questions and bugs: [Issues](https://github.com/kingflooow/floh-iptv/issues).
+NOTES
+- No channels are included. You need your own playlist from a source you
+  are legally allowed to use.
+- Installs as a separate app (new app ID), so it will not overwrite the
+  original FLOH IPTV.
+- Target: Samsung Tizen TVs (2018+ recommended, Tizen 3.0 or newer).
+  The package is unsigned, so sign it with your own certificate when
+  installing (Tizen Studio, Jellyfin Web Installer, etc.).
